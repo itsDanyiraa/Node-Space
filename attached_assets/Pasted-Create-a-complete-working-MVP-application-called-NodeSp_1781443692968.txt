@@ -1,0 +1,126 @@
+Create a complete working MVP application called "NodeSpace".
+
+CORE CONCEPT:
+NodeSpace is a visual infinite canvas app where users can create nodes, write anything inside them, and connect them freely. It is NOT a task manager, NOT a mind map tool, and NOT a project planner. It is a flexible "thinking canvas" where users visually build ideas, goals, and systems using nodes.
+
+---
+
+MAIN FEATURES:
+
+1. INFINITE CANVAS
+- Users can pan around freely.
+- Users can zoom in/out.
+- Canvas has no boundaries.
+
+2. NODE CREATION
+- Double tap / click empty space to create a node.
+- Each node contains:
+  - Title (required)
+  - Notes (optional)
+  - Color selector
+  - Delete button
+- Nodes can be dragged anywhere freely.
+
+3. CONNECTION SYSTEM
+- Users can connect nodes by dragging from one node connector to another.
+- Connections update automatically when nodes move.
+- Connections are visual lines between nodes.
+
+---
+
+4. NODE TYPES:
+
+A. STANDARD NODE
+- Basic node with title and notes.
+
+B. MERGE NODE (IMPORTANT FEATURE)
+- Users can connect multiple nodes into a single Merge Node.
+- Merge Node represents combined meaning of all connected nodes.
+- Merge Node does NOT require manual text input; it automatically represents the sum of its inputs.
+- Example:
+  - "Learn Blender" + "Learn Godot" → Merge Node = "Game Development"
+  - "Gym" + "Diet" + "Sleep" → Merge Node = "Healthy Lifestyle"
+
+C. GROUP NODE
+- Acts like a container holding multiple nodes visually.
+
+D. FLOW NODE
+- Represents a process or sequence (step-by-step flow like a pipeline).
+
+---
+
+5. SAVE SYSTEM
+- Automatically save all nodes and connections locally (local storage or JSON file).
+- Auto-load previous session when app starts.
+- No login required.
+- No cloud required.
+
+---
+
+6. UI / UX REQUIREMENTS
+- Clean, modern, minimal UI.
+- Mobile-first design (but also works on desktop/web).
+- Smooth dragging and animations.
+- Simple onboarding (users should understand in under 1 minute).
+
+---
+
+7. NODE COLORS:
+- Green = Personal
+- Blue = Work
+- Yellow = Ideas
+- Red = Important
+- Purple = Projects
+
+---
+
+TECHNICAL REQUIREMENTS:
+
+- Use a modern, modular architecture.
+- Keep code clean and well-commented.
+- Separate logic for:
+  - Node system
+  - Canvas system
+  - Connection system
+  - Save/load system
+- Must include all source files.
+
+---
+
+RECOMMENDED IMPLEMENTATION:
+Use Flutter (preferred) OR any modern framework suitable for:
+- Android
+- iOS
+- Web
+- Replit preview
+
+---
+
+DATA STRUCTURE (EXAMPLE JSON):
+
+{
+  "nodes": [
+    {
+      "id": 1,
+      "type": "standard",
+      "title": "Learn Godot",
+      "notes": "",
+      "color": "blue",
+      "x": 120,
+      "y": 300
+    }
+  ],
+  "connections": [
+    {
+      "from": 1,
+      "to": 2
+    }
+  ]
+}
+
+---
+
+GOAL:
+Build a lightweight visual thinking tool where users can freely build, merge, and connect ideas into structured systems. The app should feel intuitive, fast, and creative — like a visual brain.
+
+Do NOT turn this into a task manager or productivity checklist app. It must feel like a creative sandbox for thoughts.
