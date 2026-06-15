@@ -1,0 +1,8 @@
+[build]
+  command = "pnpm install --frozen-lockfile && pnpm --filter @workspace/nodespace run build"
+  publish = "artifacts/nodespace/dist/public"
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
