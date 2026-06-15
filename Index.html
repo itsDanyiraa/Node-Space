@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Node App</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    header {
+      padding: 20px;
+      text-align: center;
+      background: #111827;
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 20px;
+    }
+
+    .card {
+      background: #1f2937;
+      padding: 15px;
+      border-radius: 12px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 8px;
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    #output {
+      margin-top: 10px;
+      color: #22c55e;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>⚡ My Node-Based App</header>
+
+  <div class="container">
+
+    <div class="card">
+      <h2>Welcome</h2>
+      <p>This is your GitHub Pages app base.</p>
+    </div>
+
+    <div class="card">
+      <h2>Test Interaction</h2>
+      <button onclick="runNode()">Run Node Logic</button>
+      <div id="output"></div>
+    </div>
+
+  </div>
+
+  <script>
+    function runNode() {
+      const output = document.getElementById("output");
+
+      // simulate "node system"
+      let data = {
+        status: "success",
+        time: new Date().toLocaleTimeString()
+      };
+
+      output.innerText = "Node executed at " + data.time;
+    }
+  </script>
+
+</body>
+</html>
