@@ -26,6 +26,7 @@ import { OnboardingHints } from "@/components/OnboardingHints";
 import { loadCanvas, saveCanvas } from "@/lib/storage";
 import { createNode, createMergeNode } from "@/lib/nodeUtils";
 import { Toaster } from "@/components/ui/toaster";
+import { IOSInstallBanner } from "@/components/IOSInstallBanner";
 
 const nodeTypes = {
   standard: StandardNode,
@@ -247,6 +248,7 @@ function App() {
       <ReactFlowProvider>
         <Canvas />
       </ReactFlowProvider>
+      <IOSInstallBanner />
       <Toaster />
     </div>
   );
